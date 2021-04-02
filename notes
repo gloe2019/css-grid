@@ -1,0 +1,28 @@
+1. Define your grid
+    Have a general idea of your pagelayout, and split them into columns and rows (markup your wireframe)
+2. Choose your grid container, and set it to display:grid
+    Note - every DIRECT child of the container will become a grid item!
+3. Define the grid 
+    Specify your column and row sizes with grid-template-columns and grid-template-rows
+    Note - track sizes can be defined by any CSS units, as well as min-content(minimum size needed to fit the content of the container) and auto(resized unspecified field to fill up all available space)
+4. Position grid items
+    Items will be positioned in the next avaiable grid cell unless rules are explicitly defined using grid-column-start and grid-column-end
+
+==========================================
+Defining Grids: In-depth
+    
+Grid Track Sizes can be defined using many options
+    - Static Values: px, rems, ems, ch, pt, pc
+        These do not change, no matter what the viewport is.
+    - Percentage - this is relative to the size of the grid. If the grid is responsive to the viewport, then the layout will be responsive as well.
+    - Auto: let the browser decide. This is the default track size for CSS grid.
+        You can use this if you have defined tracks and want to split up the remaining space between the undefined tracks
+    - Fractional unit (fr): use to divide up the remaining space
+        4 equal columns: 1fr 1fr 1fr 1fr
+        6 equal columns: 1fr 1fr 1fr 1fr 1fr 1fr
+        4 columns, 1 with 50% of content, and the rest divided equally: 2fr 1fr 1fr 1fr
+    Viewport-responsive track size units: fr, %, auto
+    
+    There are also content-responsive track sizes! - size is determined by the contend within the grid cell
+    - min-content: make the track as small as possible to fit its content
+      ex: with text, it won't get small enough to break words. 

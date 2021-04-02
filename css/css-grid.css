@@ -1,0 +1,50 @@
+/* html, body {
+    height: 100%;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 15em auto 15em;
+    grid-template-rows: min-content auto min-content;
+}
+
+header, footer {
+    grid-column: 1 / 4;
+} */
+/* To create a grid, you must apply the property - display:grid to the container element.
+.*/
+html,
+body {
+    height: 100%;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: min-content auto min-content;
+}
+
+/* Defining Grid columns
+grid-template-columns -- applied to a grid container...
+    this defines the number of columns in a grid container and their widths.
+    [grid container] {
+        grid-template-columns: 200px 200px; --> px = tracksize/width specifying a two column grid
+        Grid containers make all their DIRECT children items into grid items, assigning them to a grid cell...
+        setting a tracksize to auto means the column should be as large as it can to fill up the space it has access to
+        */
+/*Positioning Grid Items - we use two properties - applied to grid items!
+grid-column-start: defines the grid line a grid item should start at. this is passed in as a number. The value should be the column grid line that the element should start at.
+grid-column-end: defines the grid line a grid item should end at.
+*/
+
+header,
+footer {
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+
+
+/*Grid Rows & The Implicit Grid
+Grid rows are implicity set to auto - so they are spread evenly if not explicitlyy set.
+grid-template-rows: defines the number of rows in a grid container and their heights --- also applied to a grid container. */
