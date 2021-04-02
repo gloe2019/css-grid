@@ -1,10 +1,27 @@
+==========================================
+CSS Grid Intro
+To create a grid, you must apply the property - display:grid to the container element.
+
+Defining Grid columns
+- Two properties, applied to the grid container
+- grid-template-columns: this defines the number of columns in a grid container and their widths.
+    ex: grid-template-columns: 200px 200px; --> tracksize/width specifying a two column grid with both columns being 200px.
+    Note: Grid containers make all their DIRECT children items into grid items, assigning them to a grid cell...
+- grid-template-rows: defines the number of rows in a grid container and their heights
+    Note: Grid rows are implicity set to auto - so they are spread evenly if not explicitly set (using grid-template-rows)
+Positioning Grid Items
+- Two properties, applied to grid items!
+grid-column-start: defines the grid line a grid item should start at. The value should be the column grid line that the element should start at.
+grid-column-end: defines the grid line a grid item should end at.
+
+Basic Steps for setting up a layout with CSS Grid:
 1. Define your grid
-    Have a general idea of your pagelayout, and split them into columns and rows (markup your wireframe)
+    Have a general idea of your page layout - split them into columns and rows (markup your wireframe!)
 2. Choose your grid container, and set it to display:grid
     Note - every DIRECT child of the container will become a grid item!
 3. Define the grid 
     Specify your column and row sizes with grid-template-columns and grid-template-rows
-    Note - track sizes can be defined by any CSS units, as well as min-content(minimum size needed to fit the content of the container) and auto(resized unspecified field to fill up all available space)
+    Note - track sizes can be defined by any CSS units, as well as min-content(minimum size needed to fit the content of the container) and auto(resize unspecified field(s) to fill up all available space)
 4. Position grid items
     Items will be positioned in the next avaiable grid cell unless rules are explicitly defined using grid-column-start and grid-column-end
 
