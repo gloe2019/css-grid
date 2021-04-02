@@ -40,6 +40,13 @@ Grid Track Sizes can be defined using many options
         4 columns, 1 with 50% of content, and the rest divided equally: 2fr 1fr 1fr 1fr
     Viewport-responsive track size units: fr, %, auto
     
-    There are also content-responsive track sizes! - size is determined by the contend within the grid cell
+    There are also content-responsive track sizes! - size is determined by the content within the grid cell
     - min-content: make the track as small as possible to fit its content
-      ex: with text, it won't get small enough to break words. 
+        ex: with text, it won't get small enough to break words. 
+    - max-content: make the track as alrge as necessary to contain its content
+        ex: with text, everything will fit on one line.
+    - minmax(min size, max size): function to specify minimum and maximum values for a track.
+        allows you combine content-determined track size with a viewport-determined track size.
+        ex: minmax(max-content, 50%) - the minimum track size will fit the text on one line, and maximum is 50% of the viewport.
+    - fit-content(max size): fit track size to content, but don't exceed the specified value
+        
